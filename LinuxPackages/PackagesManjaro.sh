@@ -31,6 +31,7 @@ sudo pacman-mirrors -g --geoip
 sudo pacman -Sy git
 git config --global user.name "Wesley Flôres"
 git config --global user.email wesleyfloresterres@gmail.com
+git config credential.helper store
 
 ## HTOP
 sudo pacman -Sy htop

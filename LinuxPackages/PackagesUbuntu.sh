@@ -63,6 +63,13 @@ sudo apt update && sudo apt upgrade
 sudo apt install php
 sudo apt install php-xml
 
+## POSTGRES
+sudo apt update && sudo apt upgrade && sudo apt autoremove 
+sudo apt install postgresql postgresql-contrib postgresql-client-common postgresql-client
+pg_ctlcluster 12 main start
+sudo service postgresql restart
+sudo -u postgres psql
+
 ## RAR
 sudo apt update && sudo apt upgrade
 sudo apt install unrar

@@ -37,6 +37,14 @@ sudo add-apt-repository ppa:libreoffice/ppa
 sudo apt update && sudo apt upgrade
 sudo apt install libreoffice
 
+## MYSQL
+sudo apt update && sudo apt upgrade
+sudo apt install mysql-server
+sudo /etc/init.d/mysql start
+sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
+# port = 8060
+sudo /etc/init.d/mysql restart
+
 ## NVM
 sudo apt update && sudo apt upgrade
 wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash

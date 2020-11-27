@@ -185,7 +185,7 @@
     
     # SHOW WHICH APP WILL BE RUN BY DEFAULT; IT SHOWS THE FULL PATH --> LINUX@ADMIN:~$ WHICH APP
 
-## 🔏 SEARCHING
+<h6 align="center">🔏 SEARCHING</h6>
 
     # SEARCH FOR PATTERN IN FILES --> LINUX@ADMIN:~$ GREP PATTERN FILES
     
@@ -204,8 +204,8 @@
     # SHOW THE SUBDIRECTORY CONTAINING THE EXECUTABLE FILE CALLED FILENAME --> LINUX@ADMIN:~$ WHICH FILENAME
     
     # STARTING WITH THE DIRECTORY CALLED DIR, LOOK FOR AND LIST ALL FILES CONTAINING TEXTSTRINGTOFIND --> LINUX@ADMIN:~$ GREP TEXTSTRINGTOFIND /DIR
-
-## 🔏 FILE PERMISSIONS
+    
+<h6 align="center">🔏 FILE PERMISSIONS</h6>
 
     # [7][DONO]R[4]W[2]X[1] [7][GRUPO]R[4]W[2]X[1] [7][TODOS]R[4]W[2]X[1]
 
@@ -217,36 +217,119 @@
     
     # FOR MORE OPTIONS, SEE MAN CHMOD --> LINUX@ADMIN:~$ MAN CHMOD
 
-## 🔏 FILE COMMANDS
+<h6 align="center">🔏 FILE COMMANDS</h6>
 
-    # DIRECTORY LISTING                                                                                                --> LINUX@ADMIN:~$ LS
-    # LIST FILES IN CURRENT DIRECTORY USING LONG FORMAT                                                                --> LINUX@ADMIN:~$ LS -L
-    # LIST ALL FILES IN CURENT DIRECTORY IN LONG FORMAT AND DISPLAY IN COLUMNS                                         --> LINUX@ADMIN:~$ LS -LAC
-    # LIST FILES IN CURRENT DIRECTORY AND INDICATE THE FILE TYPE                                                       --> LINUX@ADMIN:~$ LS -F
-    # FORMATTED LISTING WITH HIDDEN FILES                                                                              --> LINUX@ADMIN:~$ LS -AL
-    # CHANGE DIRECTORY OF DIR                                                                                          --> LINUX@ADMIN:~$ CD DIR
-    # CHANGE TO HOME                                                                                                   --> LINUX@ADMIN:~$ CD
-    # CREATE A DIRECTORY DIR                                                                                           --> LINUX@ADMIN:~$ MKDIR DIR
-    # SHOW CURRENT DIRECTORY                                                                                           --> LINUX@ADMIN:~$ PWD
-    # REMOVE A FILE OR DIRECTORY CALLED NAME                                                                           --> LINUX@ADMIN:~$ RM NAME
-    # DELETE DIRECTORY DIR                                                                                             --> LINUX@ADMIN:~$ RM -R DIR
-    # FORCE REMOVE FILE                                                                                                --> LINUX@ADMIN:~$ RM -F FILE
-    # FORCE REMOVE AN ENTIRE DIRECTORY DIR AND ALL IT'S INCLUDED FILES AND SUBDIRECTORIES (USE WITH EXTREME CAUTION)   --> LINUX@ADMIN:~$ RM -RF DIR
-    # COPY FILE1 TO FILE2                                                                                              --> LINUX@ADMIN:~$ CP FILE1 FILE2
-    # COPY DIR1 TO DIR2; CREATE DIR2 IF IT DOESN'T EXIST                                                               --> LINUX@ADMIN:~$ CP -R DIR1 DIR2
-    # COPY THE FILENAME CALLED FILE TO THE /HOME/DIRNAME DIRECTORY                                                     --> LINUX@ADMIN:~$ CP FILE /HOME/DIRNAME
-    # MOVE THE FILE CALLED FILENAME TO THE /HOME/DIRNAME DIRECTORY                                                     --> LINUX@ADMIN:~$ MV FILE /HOME/DIRNAME
-    # RENAME OR MOVE FILE1 TO FILE2; IF FILE2 IS AN EXISTING DIRECTORY, MOVES FILE1 INTO DIRECTORY FILE2               --> LINUX@ADMIN:~$ MV FILE1 FILE2
-    # CREATE SYMBOLIC LINK LINK TO FILE                                                                                --> LINUX@ADMIN:~$ LN -S FILE LINK
-    # CREATE OR UPDATE FILE                                                                                            --> LINUX@ADMIN:~$ TOUCH FILE
-    # PLACES STANDARD INPUT INTO FILE                                                                                  --> LINUX@ADMIN:~$ CAT > FILE
-    # DISPLAY THE FILE CALLED FILE                                                                                     --> LINUX@ADMIN:~$ CAT FILE
-    # DISPLAY THE FILE CALLED FILE ONE PAGE AT A TIME, PROCEED TO NEXT PAGE USING THE SPACEBAR                         --> LINUX@ADMIN:~$ MORE FILE
-    # OUTPUT THE FIRST 10 LINES OF FILE                                                                                --> LINUX@ADMIN:~$ HEAD FILE
-    # DISPLAY THE FIRST 20 LINES OF THE FILE CALLED FILE                                                               --> LINUX@ADMIN:~$ HEAD -20 FILE
-    # OUTPUT THE LAST 10 LINES OF FILE                                                                                 --> LINUX@ADMIN:~$ TAIL FILE
-    # DISPLAY THE LAST 20 LINES OF THE FILE CALLED FILE                                                                --> LINUX@ADMIN:~$ TAIL -20 FILE
-    # OUTPUT THE CONTENTS OF FILE AS IT GROWS, STARTING WITH THE LAST 10 LINES                                         --> LINUX@ADMIN:~$ TAIL -F FILE
+```bash
+    DIRECTORY LISTING                                                                                                --> LINUX@ADMIN:~$ LS
+```
+
+```bash
+    LIST FILES IN CURRENT DIRECTORY USING LONG FORMAT                                                                --> LINUX@ADMIN:~$ LS -L
+```
+
+```bash
+    LIST ALL FILES IN CURENT DIRECTORY IN LONG FORMAT AND DISPLAY IN COLUMNS                                         --> LINUX@ADMIN:~$ LS -LAC
+```
+
+```bash
+    LIST FILES IN CURRENT DIRECTORY AND INDICATE THE FILE TYPE                                                       --> LINUX@ADMIN:~$ LS -F
+```
+
+```bash
+    FORMATTED LISTING WITH HIDDEN FILES                                                                              --> LINUX@ADMIN:~$ LS -AL
+```
+
+```bash
+    CHANGE DIRECTORY OF DIR                                                                                          --> LINUX@ADMIN:~$ CD DIR
+```
+
+```bash
+    CHANGE TO HOME                                                                                                   --> LINUX@ADMIN:~$ CD
+```
+
+```bash
+    CREATE A DIRECTORY DIR                                                                                           --> LINUX@ADMIN:~$ MKDIR DIR
+```
+
+```bash
+    SHOW CURRENT DIRECTORY                                                                                           --> LINUX@ADMIN:~$ PWD
+```
+
+```bash
+    REMOVE A FILE OR DIRECTORY CALLED NAME                                                                           --> LINUX@ADMIN:~$ RM NAME
+```
+
+```bash
+    DELETE DIRECTORY DIR                                                                                             --> LINUX@ADMIN:~$ RM -R DIR
+```
+
+```bash
+    FORCE REMOVE FILE                                                                                                --> LINUX@ADMIN:~$ RM -F FILE
+```
+
+```bash
+    FORCE REMOVE AN ENTIRE DIRECTORY DIR AND ALL IT'S INCLUDED FILES AND SUBDIRECTORIES (USE WITH EXTREME CAUTION)   --> LINUX@ADMIN:~$ RM -RF DIR
+```
+
+```bash
+    COPY FILE1 TO FILE2                                                                                              --> LINUX@ADMIN:~$ CP FILE1 FILE2
+```
+
+```bash
+    COPY DIR1 TO DIR2; CREATE DIR2 IF IT DOESN'T EXIST                                                               --> LINUX@ADMIN:~$ CP -R DIR1 DIR2
+```
+
+```bash
+    COPY THE FILENAME CALLED FILE TO THE /HOME/DIRNAME DIRECTORY                                                     --> LINUX@ADMIN:~$ CP FILE /HOME/DIRNAME
+```
+
+```bash
+    MOVE THE FILE CALLED FILENAME TO THE /HOME/DIRNAME DIRECTORY                                                     --> LINUX@ADMIN:~$ MV FILE /HOME/DIRNAME
+```
+
+```bash
+    RENAME OR MOVE FILE1 TO FILE2; IF FILE2 IS AN EXISTING DIRECTORY, MOVES FILE1 INTO DIRECTORY FILE2               --> LINUX@ADMIN:~$ MV FILE1 FILE2
+```
+
+```bash
+    CREATE SYMBOLIC LINK LINK TO FILE                                                                                --> LINUX@ADMIN:~$ LN -S FILE LINK
+```
+
+```bash
+    CREATE OR UPDATE FILE                                                                                            --> LINUX@ADMIN:~$ TOUCH FILE
+```
+
+```bash
+    PLACES STANDARD INPUT INTO FILE                                                                                  --> LINUX@ADMIN:~$ CAT > FILE
+```
+
+```bash
+    DISPLAY THE FILE CALLED FILE                                                                                     --> LINUX@ADMIN:~$ CAT FILE
+```
+
+```bash
+    DISPLAY THE FILE CALLED FILE ONE PAGE AT A TIME, PROCEED TO NEXT PAGE USING THE SPACEBAR                         --> LINUX@ADMIN:~$ MORE FILE
+```
+
+```bash
+    OUTPUT THE FIRST 10 LINES OF FILE                                                                                --> LINUX@ADMIN:~$ HEAD FILE
+```
+
+```bash
+    DISPLAY THE FIRST 20 LINES OF THE FILE CALLED FILE                                                               --> LINUX@ADMIN:~$ HEAD -20 FILE
+```
+
+```bash
+    OUTPUT THE LAST 10 LINES OF FILE                                                                                 --> LINUX@ADMIN:~$ TAIL FILE
+```
+
+```bash
+    DISPLAY THE LAST 20 LINES OF THE FILE CALLED FILE                                                                --> LINUX@ADMIN:~$ TAIL -20 FILE
+```
+
+```bash
+    OUTPUT THE CONTENTS OF FILE AS IT GROWS, STARTING WITH THE LAST 10 LINES                                         --> LINUX@ADMIN:~$ TAIL -F FILE
+```
 
 ## 🔏 COMPRESSION
 

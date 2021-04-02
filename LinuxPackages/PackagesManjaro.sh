@@ -36,6 +36,10 @@ git config credential.helper store
 ## HTOP
 sudo pacman -Sy htop
 
+## LIBREOFFICE
+sudo pacman -S libreoffice-fresh libreoffice-fresh-pt-br
+trizen -S libreoffice-extension-vero
+
 ## LIBREPCB
 sudo snap install librepcb
 
@@ -92,6 +96,9 @@ sudo pacman -Sy qbittorrent
 
 ## TMUX
 sudo pacman -Sy tmux
+
+## TRIZEN
+sudo pacman -Sy trizen
 
 ## UNRAR
 sudo pacman -Sy unrar

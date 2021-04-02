@@ -101,7 +101,7 @@ sudo pacman -S linux$(uname -r | cut -c 1,3)-virtualbox-host-modules
 sudo /sbin/rcvboxdrv setup
 
 ## VISUAL STUDIO CODE
-install sudo pacman -S base-devel
+sudo pacman -S base-devel
 yay -S visual-studio-code-bin
 sudo chown -R $(whoami) /opt/visual-studio-code
 sudo chown -R root /opt/visual-studio-code

@@ -73,8 +73,8 @@ sudo systemctl enable mariadb.service
 sudo systemctl start mariadb.service
 sudo mysql;
 DROP USER 'root'@'localhost';
-CREATE USER 'root'@'%' IDENTIFIED BY '';
-GRANT ALL PRIVILEGES ON *.* TO 'root'@'%' WITH GRANT OPTION;
+CREATE USER 'root'@'localhost' IDENTIFIED BY 'pass';
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 sudo mysql --user root
 

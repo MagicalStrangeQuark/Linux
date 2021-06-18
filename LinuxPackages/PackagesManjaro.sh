@@ -38,6 +38,11 @@ sudo pacman -Sy docker
 sudo systemctl start docker
 sudo chmod 666 /var/run/docker.sock
 
+## DOCKER-COMPOSE
+sudo chmod +x /usr/local/bin/docker-compose
+sudo curl -L https://github.com/docker/compose/releases/download/1.21.0/docker-compose-$(uname -s)-$(uname -m) -o /usr/local/bin/docker-compose
+sudo systemctl restart docker
+
 ## FOXIT
 wget https://cdn01.foxitsoftware.com/pub/foxit/reader/desktop/linux/2.x/2.4/en_us/FoxitReader.enu.setup.2.4.4.0911.x64.run.tar.gz
 tar -xf FoxitReader.enu.setup.2.4.4.0911.x64.run.tar.gz

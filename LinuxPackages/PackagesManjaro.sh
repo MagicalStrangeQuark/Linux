@@ -1,3 +1,8 @@
+## CHROME
+sudo pacman -Sy yay
+sudo pacman -S base-devel
+sudo yay google-chrome
+
 ## CIRCLECI
 sudo snap install circleci
 

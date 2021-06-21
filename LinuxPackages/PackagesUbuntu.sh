@@ -10,6 +10,13 @@ sudo apt install calibre
 sudo apt update && sudo apt upgrade
 sudo apt install composer
 
+## DOCKER
+sudo apt update && sudo apt upgrade
+sudo apt install docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo chmod 666 /var/run/docker.sock
+
 ## FIREFOX
 sudo add-apt-repository ppa:mozillateam/firefox-next
 sudo apt update && sudo apt upgrade

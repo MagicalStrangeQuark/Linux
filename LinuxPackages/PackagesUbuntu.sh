@@ -54,7 +54,8 @@ sudo /etc/init.d/mysql restart
 
 ## NVM
 sudo apt update && sudo apt upgrade
-wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.0/install.sh | bash
+curl https://raw.githubusercontent.com/creationix/nvm/master/install.sh | bash
+source ~/.profile
 
 ## NPM
 sudo apt update && sudo apt upgrade

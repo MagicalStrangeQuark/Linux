@@ -39,6 +39,11 @@ sudo apt-get install gnome-screenshot
 sudo apt update && sudo apt upgrade
 sudo apt install htop
 
+## JAVA
+sudo apt update && sudo apt upgrade
+sudo apt install default-jre
+sudo apt install default-jdk
+
 ## LIBREOFFICE
 sudo add-apt-repository ppa:libreoffice/ppa
 sudo apt update && sudo apt upgrade

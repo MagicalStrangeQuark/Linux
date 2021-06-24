@@ -52,9 +52,9 @@ sudo apt install libreoffice
 ## MYSQL
 sudo apt update && sudo apt upgrade
 sudo apt install mysql-server
-sudo /etc/init.d/mysql start
-sudo vi /etc/mysql/mysql.conf.d/mysqld.cnf
-# port = 8060
+sudo mysql_secure_installation
+sudo mysql
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'secret';
 sudo /etc/init.d/mysql restart
 
 ## NVM

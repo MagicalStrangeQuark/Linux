@@ -115,6 +115,9 @@ systemctl enable postgresql.service
 systemctl start postgresql.service
 systemctl status postgresql.service
 
+## POSTMAN
+yay -S postman-bin
+
 ## PGADMIN4
 sudo pacman -Sy pgadmin4
 sudo -i -u postgres

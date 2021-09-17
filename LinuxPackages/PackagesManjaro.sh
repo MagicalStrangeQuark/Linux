@@ -89,11 +89,9 @@ GRANT ALL PRIVILEGES ON *.* TO 'root'@'localhost' WITH GRANT OPTION;
 FLUSH PRIVILEGES;
 sudo mysql --user root
 
-## NODE
-snap install --edge node
-sudo systemctl enable --now snapd.socket
-sudo ln -s /var/lib/snapd/snap /snap
-snap install --edge node --classic
+## NVM + NODE
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.38.0/install.sh | bash
+nvm install node
 
 ## P7ZIP
 sudo pacman -Sy p7zip

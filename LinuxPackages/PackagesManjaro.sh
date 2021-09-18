@@ -65,6 +65,7 @@ sudo pacman -Sy htop
 
 ## LIBREOFFICE
 sudo pacman -S libreoffice-fresh libreoffice-fresh-pt-br
+sudo pacman -Sy trizen
 trizen -S libreoffice-extension-vero
 
 ## LIBREPCB

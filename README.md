@@ -1,19 +1,19 @@
-<p align="center"><img src="Tux.svg" width="400"></p>
+<p align="center"><img src="https://raw.githubusercontent.com/MagicalStrangeQuark/MagicalStrangeQuark/master/assets/tux.svg" width="400"></p>
 
 <p align="center">Small study documentation of <a href="https://www.redhat.com/pt-br/topics/linux">👉 GNU/Linux 👈</a>, studying for <a href="https://www.lpi.org/our-certifications/lpic-1-overview">LPIC-1</a></p>
 
 <p align="center">
     <a href="https://opensource.org/licenses/MIT">
-        <img alt="License" src="https://img.shields.io/badge/License-MIT-yellow.svg">
+        <img alt="License" src="https://img.shields.io/github/license/MagicalStrangeQuark/Linux">
     </a>
     <a href="#">
-        <img alt="License" src="https://img.shields.io/github/languages/count/MagicalStrangeQuark/ZCPE-ZCE">
+        <img alt="Languages" src="https://img.shields.io/github/languages/count/MagicalStrangeQuark/Linux">
     </a>
     <a href="#">
-        <img alt="License" src="https://img.shields.io/github/last-commit/MagicalStrangeQuark/ZCPE-ZCE">
+        <img alt="Last Commit" src="https://img.shields.io/github/last-commit/MagicalStrangeQuark/Linux">
     </a>
     <a href="#">
-        <img alt="License" src="https://img.shields.io/github/followers/MagicalStrangeQuark?style=social">
+        <img alt="Followers" src="https://img.shields.io/github/followers/MagicalStrangeQuark?style=social">
     </a>
 </p>
 

@@ -17,9 +17,113 @@
     </a>
 </p>
 
-<h1 align="center">Repositório de Scripts Úteis para GNU/Linux</h1>
+Linux - História
 
-<h2>🧩 Comparação entre Números</h2>
+Licenças
+
+- GPL v2 - Kernel do Linux, por exemplo
+
+- GPL v3
+
+- BSD
+
+- Apache
+
+- MIT
+
+- Creative Commons
+
+GNU e Software Livre - Richard Stalman - 1993
+
+Software Livre -  Liberdades
+
+- Executar como você desejar
+
+- Estudar
+
+- Redistribuir cópias
+
+- Modificar e distribuir cópias das versões modificadas
+
+Filesystem Hierarchy Standard - Year started: 14 February 1994; 28 years ago
+
+<h6>Comandos de Logout</h6>
+
+```bash
+logout
+```
+
+```bash
+exit
+```
+
+```bash
+Ctrl + D
+```
+
+<h5>Desligar o Linux</h5>
+
+halt
+
+echo o > /proc/sysrq-trigger
+
+shutdown -h now
+
+poweroff
+
+init 0
+
+<h5>Reiniciar o Linux</h5>
+
+reboot
+
+echo b > /proc/sysrq-trigger
+
+shutdown -r now
+
+poweroff --reboot
+
+init 6
+
+shuwdown -r 18:00
+
+shutdown -r +30 "Machine will restart in 30 minutes"
+
+shutdown -c "It will not be necessary restart the machine"
+
+<h5>Debian Pacotes</h6>
+
+```bash
+apt install tree coreutils bsdutils bsdmainutils net-tools man-db
+```
+
+Em que ano a distribuição Debian foi criada? 1993
+
+Qual o nome da distribuição Linux que garante a distribuição de sofwares apenas livres em seu repositório principal? `Debian`
+
+Qual o comando utilizado para retornar para o diretório anterior? `cd -`
+
+Onde estão os shells disponívels? `cat /etc/shells`
+
+Qual é o diretório onde está o arquivo do kernel do Linux? `/boot`
+
+<h5>Principais Variáveis de Ambiente</h5>
+
+É importante conhecer a função de algumas variáveis de ambiente existentes no sistema, as principais são:
+
+<strong>DISPLAY</strong>: Indica às aplicações gráficas onde as janelas deverão ser exibidas. Será estudado no Tópico 106.
+<strong>HISTFILE</strong>: Arquivo do histórico de comandos
+<strong>HISTFILESIZE</strong>: Quantidade de linhas/comandos armazenados no arquivo de histórico
+<strong>HOME</strong>: Indica o diretório do usuário atual
+<strong>LOGNAME e USER</strong>: Nome do usuário atual
+<strong>PATH</strong>: Diretórios em que o Linux irá procurar por arquivos executáveis
+<strong>PS1</strong>: Aparência do prompt do shell.
+<strong>PWD</strong>: Diretório atual
+<strong>OLDPWD</strong>: Diretório anterior
+
+<h3 align="center">Repositório de Scripts Úteis para GNU/Linux</hh3>
+
+<h4>🧩 Comparação entre Números</h4>
 
 |  PROGRAMAÇÃO |  SHELL    |              SIGNIFICADO            |
 | ------------ | --------- | ----------------------------------- |
@@ -52,332 +156,54 @@
     ~$: [ -f /etc/profile ]; echo $?
 ```
 
-<h4>EXEMPLO TR</h4>
+<h6>EXEMPLO TR</h6>
 
 ```
     ~$: echo 'Hello World,    Testing Trrrrr ! ! !      ! ! !' | tr -s "[:blank:]" | tr "[!]" "[%]"
 ```
 
-<h4>EXIBE O TEMPO DA EXCUÇÃO DA INSTRUÇÃO</h4>
+<h6>EXIBE O TEMPO DA EXCUÇÃO DA INSTRUÇÃO</h6>
 
 ```
     ~$: time (ls)
 ```
 
-<h4>mostra os arquivos e grava em temp.txt</h4>
+<h6>mostra os arquivos e grava em temp.txt</h6>
 
 ```
     ~$: ls | tee temp.txt
 ```
 
-<h4></h4>
+<h6></h6>
 
 ```
     ~$: cat Fruits.TXT | tr -s "[:blank:]" | uniq --unique --ignore-case | tee FruitsUniq.TXT
 ```
 
-<h4>EXECUTA O COMANDO APÓS XARGS PARA CADA ELEMENTO DA LISTA</h4>
+<h6>EXECUTA O COMANDO APÓS XARGS PARA CADA ELEMENTO DA LISTA</h6>
 
 ```
     ~$: cat Person.TXT | xargs echo
 ```
 
-<h4>REDIRECIONA O QUE O SEGUE COMO SE FOSSE O CONTEÚDO DE UM ARQUIVO TEXTO</h4>
+<h6>REDIRECIONA O QUE O SEGUE COMO SE FOSSE O CONTEÚDO DE UM ARQUIVO TEXTO</h6>
 
 ```
     ~$: tr [a-z] [A-Z] <<< test.txt
 ```
 
-<h4></h4>
+<h6></h6>
 
 ```
     ~$: sudo find /var/ -name "*config*" -type d | xargs ls -ld | tee diretorios-config.out
 ```
 
-<h4>SUPRIMIR LINHAS EM BRANCO OU QUE CONTENHAM APENAS ESPAÇOS</h4>
+<h6>SUPRIMIR LINHAS EM BRANCO OU QUE CONTENHAM APENAS ESPAÇOS</h6>
 
 ```
     ~$: ls -l | awk '{print $5}' | sed '/^\s*$/d'
 ```
 
-## 🔏 SYSTEM INFO
-
-### 👑 SHOW THE CURRENT DATE AND TIME 
-    DATE
-### SHOW THE MOUNTH'S CALENDAR
-    CAL
-### 👑 SHOW CURRENT UPTIME
-    UPTIME
-### 👑 DISPLAY WHO IS ONLINE
-    W
-### 👑 WHO YOU ARE LOGGED IN AS
-    WHOAMI
-### 👑 DISPLAY INFORMATION ABOUT USER
-    FINGER USER
-### 👑 SHOW KERNEL INFORMATION
-    UNAME -A
-### 👑 CPU INFORMATION
-    CAT /PROC/CPUINFO
-### 👑 MEMORY INFORMATON
-    CAT /PROC/MEMINFO
-### 👑 SHOW DISK USAGE
-    DF -H
-### 👑 SHOW DIRECTORY SPACE USAGE
-    DU
-### 👑 SHOW MEMORY AND SWAP USAGE
-    FREE
-
-## 🔏 KEYBOARD SHORTCUTS
-
-    > RUN THE COMMAND --> LINUX@ADMIN:~$ ENTER
-    
-    > SHOW THE PREVIOUS COMMAND --> LINUX@ADMIN:~$ UP ARROW
-    
-    > ALLOWS YOU TO TYPE A PART OF THE COMMAND YOU'RE LOOKING FOR AND FINDS IT --> LINUX@ADMIN:~$ CTRL + R
-    
-    > STOPS THE CURRENT COMMAND, RESUME WITH FG IN THE FOREGROUND OR BG IN THE BACKGROUND --> LINUX@ADMIN:~$ CTRL + Z
-    
-    > HALTS THE CURRENT COMMAND, CANCEL THE CURRENT OPERATION AND/OR START WITH A FRESH NEW LINE --> LINUX@ADMIN:~$ CTRL + C
-    
-    > CLEAR THE SCREEN --> LINUX@ADMIN:~$ CTRL + L
-    
-    > ALLOWS THE SCROLLING OF THE BASH COMMAND WINDOW USING SHIFT + UP ARROW AND SHIFT + DOWN ARROW --> LINUX@ADMIN:~$ COMMAND | LESS
-    
-    > REPEATS THE LAST COMMAND --> LINUX@ADMIN:~$ !!
-    
-    > REPEATS THE LAST ARGUMENT OF THE PREVIOUS COMMAND --> LINUX@ADMIN:~$ COMMAND !$
-    
-    > INSERT THE LAST ARGUMENT OF THE PREVIOUS COMAND ON THE FLY, WHICH ENABLES YOU TO EDIT IT BEFORE EXECUTING THE COMMAND --> LINUX@ADMIN:~$ ESC +. (A PERIOD)
-    
-    > RETURN TO THE START OF THE COMMAND YOU'RE TYPING --> LINUX@ADMIN:~$ CTRL + A 
-    
-    > GO TO THE END OF THE COMMAND YOU'RE TYPING --> LINUX@ADMIN:~$ CTRL + E
-    
-    > CUT EVERYTHING BEFORE THE CURSOR TO A SPECIAL CLIPBOARD, ERASES THE WHOLE LINE --> LINUX@ADMIN:~$ CTRL + U
-    
-    > CUT EVERYTHING AFTER THE CURSOR TO A SPECIAL CLIPBOARD --> LINUX@ADMIN:~$ CTRL + K
-    
-    > PASTE FROM THE SPECIAL CLIPBOARD THAT CTRL + U AND CTRL + K SAVE THEIR DATA TO --> LINUX@ADMIN:~$ CTRL + Y
-    
-    > SWAP THE TWO CHARACTERS BEFORE THE CURSOR (YOU CAN ACTUALLY USE THIS TO TRANSPORT A CHARACTER FROM THE LEFT TO THE RIGHT) --> LINUX@ADMIN:~$ CTRL + T
-    
-    > DELETE THE WORD / ARGUMENT LEFT OF THE CURSOR IN THE CURRENT LINE --> LINUX@ADMIN:~$ CTRL + W
-    
-    > LOG OUT OF CURRENT SESSION, SIMILIAR TO EXIT --> LINUX@ADMIN:~$ CTRL + D
-    
-    > CHANGE SESSION ON TMUX  --> LINUX@ADMIN:~$ tmux attach-session -t <session_number>
-
-## 🔏 LEARN THE COMMANDS
-
-    # LIST MANUAL PAGES FOR SUBJECT --> LINUX@ADMIN:~$ APROPOS SUBJECT
-    
-    # DISPLAY MAN PAGES CONTAINING KEYWORD --> LINUX@ADMIN:~$ MAN -K KEYWORD
-    
-    # SHOW THE MANUAL FOR COMMAND --> LINUX@ADMIN:~$ MAN COMMAND
-    
-    # MAKE A PDF OF A MANUAL PAGE --> LINUX@ADMIN:~$ MAN -T MAN | PS2PDF -> MAN.PDF
-    
-    # SHOW FULL PATH NAME OF COMMAND --> LINUX@ADMIN:~$ WHICH COMMAND
-    
-    # SEE HOW LONG A COMMAND TAKES --> LINUX@ADMIN:~$ TIME COMMAND
-    
-    # SHOW POSSIBLE LOCATIONS OF APP --> LINUX@ADMIN:~$ WHEREIS APP
-    
-    # SHOW WHICH APP WILL BE RUN BY DEFAULT; IT SHOWS THE FULL PATH --> LINUX@ADMIN:~$ WHICH APP
-
-<h6 align="center">🔏 SEARCHING</h6>
-
-    # SEARCH FOR PATTERN IN FILES --> LINUX@ADMIN:~$ GREP PATTERN FILES
-    
-    # SEARCH RECURSIVELY FOR PATTERN IN DIR --> LINUX@ADMIN:~$ GREP -R PATTERN DIR
-    
-    # SEACH FOR PATTERN IN THE OUTPUT OF COMMAND --> LINUX@ADMIN:~$ COMMAND | GREP PATTERN
-    
-    # FIND ALL INSTANCES OF FILE --> LINUX@ADMIN:~$ LOCATE FILE
-    
-    # STARTING WITH THE ROOT DIRECTORY, LOOK FOR THE FILE CALLED FILENAME --> LINUX@ADMIN:~$ FIND / -NAME FILENAME
-    
-    # FIND A FILE CALED FILENAME; THIS ASSUMES YOU HAVE ALREADY USED THE COMMAND UPDATEDB (SEET NEXT) --> LINUX@ADMIN:~$ LOCATE FILENAME
-    
-    # CREATE OR UPDATE THE DATABASE OF FILES ON ALL FILE SYSTEMS ATTACHED TO THE LINUX ROOT DIRECTORY --> LINUX@ADMIN:~$ UPDATEDB
-    
-    # SHOW THE SUBDIRECTORY CONTAINING THE EXECUTABLE FILE CALLED FILENAME --> LINUX@ADMIN:~$ WHICH FILENAME
-    
-    # STARTING WITH THE DIRECTORY CALLED DIR, LOOK FOR AND LIST ALL FILES CONTAINING TEXTSTRINGTOFIND --> LINUX@ADMIN:~$ GREP TEXTSTRINGTOFIND /DIR
-    
-<h6 align="center">🔏 FILE PERMISSIONS</h6>
-
-    # [7][DONO]R[4]W[2]X[1] [7][GRUPO]R[4]W[2]X[1] [7][TODOS]R[4]W[2]X[1]
-
-    # CHANGE THE PERMISSIONS OF FILE TO OCTAL, WHICH CAN BE FOUND SEPARATELY FOR USER, GROUP AND WORLD BY ADDING: 4 - READ(R), 2 - WRITE(W), 1 - EXECUTE(X) --> LINUX@ADMIN:~$ CHMOD OCTAL FILE 
-    
-    # READ, WRITE, EXECUTE FOR ALL --> LINUX@ADMIN:~$ CHMOD 777      
-    
-    # RWX FOR OWNER, RX FOR GROUP AND WORLD --> LINUX@ADMIN:~$ CHMOD 755
-    
-    # FOR MORE OPTIONS, SEE MAN CHMOD --> LINUX@ADMIN:~$ MAN CHMOD
-
-<h6 align="center">🔏 FILE COMMANDS</h6>
-
-```bash
-    DIRECTORY LISTING                                                                                                --> LINUX@ADMIN:~$ LS
-```
-
-```bash
-    LIST FILES IN CURRENT DIRECTORY USING LONG FORMAT                                                                --> LINUX@ADMIN:~$ LS -L
-```
-
-```bash
-    LIST ALL FILES IN CURENT DIRECTORY IN LONG FORMAT AND DISPLAY IN COLUMNS                                         --> LINUX@ADMIN:~$ LS -LAC
-```
-
-```bash
-    LIST FILES IN CURRENT DIRECTORY AND INDICATE THE FILE TYPE                                                       --> LINUX@ADMIN:~$ LS -F
-```
-
-```bash
-    FORMATTED LISTING WITH HIDDEN FILES                                                                              --> LINUX@ADMIN:~$ LS -AL
-```
-
-```bash
-    CHANGE DIRECTORY OF DIR                                                                                          --> LINUX@ADMIN:~$ CD DIR
-```
-
-```bash
-    CHANGE TO HOME                                                                                                   --> LINUX@ADMIN:~$ CD
-```
-
-```bash
-    CREATE A DIRECTORY DIR                                                                                           --> LINUX@ADMIN:~$ MKDIR DIR
-```
-
-```bash
-    SHOW CURRENT DIRECTORY                                                                                           --> LINUX@ADMIN:~$ PWD
-```
-
-```bash
-    REMOVE A FILE OR DIRECTORY CALLED NAME                                                                           --> LINUX@ADMIN:~$ RM NAME
-```
-
-```bash
-    DELETE DIRECTORY DIR                                                                                             --> LINUX@ADMIN:~$ RM -R DIR
-```
-
-```bash
-    FORCE REMOVE FILE                                                                                                --> LINUX@ADMIN:~$ RM -F FILE
-```
-
-```bash
-    FORCE REMOVE AN ENTIRE DIRECTORY DIR AND ALL IT'S INCLUDED FILES AND SUBDIRECTORIES (USE WITH EXTREME CAUTION)   --> LINUX@ADMIN:~$ RM -RF DIR
-```
-
-```bash
-    COPY FILE1 TO FILE2                                                                                              --> LINUX@ADMIN:~$ CP FILE1 FILE2
-```
-
-```bash
-    COPY DIR1 TO DIR2; CREATE DIR2 IF IT DOESN'T EXIST                                                               --> LINUX@ADMIN:~$ CP -R DIR1 DIR2
-```
-
-```bash
-    COPY THE FILENAME CALLED FILE TO THE /HOME/DIRNAME DIRECTORY                                                     --> LINUX@ADMIN:~$ CP FILE /HOME/DIRNAME
-```
-
-```bash
-    MOVE THE FILE CALLED FILENAME TO THE /HOME/DIRNAME DIRECTORY                                                     --> LINUX@ADMIN:~$ MV FILE /HOME/DIRNAME
-```
-
-```bash
-    RENAME OR MOVE FILE1 TO FILE2; IF FILE2 IS AN EXISTING DIRECTORY, MOVES FILE1 INTO DIRECTORY FILE2               --> LINUX@ADMIN:~$ MV FILE1 FILE2
-```
-
-```bash
-    CREATE SYMBOLIC LINK LINK TO FILE                                                                                --> LINUX@ADMIN:~$ LN -S FILE LINK
-```
-
-```bash
-    CREATE OR UPDATE FILE                                                                                            --> LINUX@ADMIN:~$ TOUCH FILE
-```
-
-```bash
-    PLACES STANDARD INPUT INTO FILE                                                                                  --> LINUX@ADMIN:~$ CAT > FILE
-```
-
-```bash
-    DISPLAY THE FILE CALLED FILE                                                                                     --> LINUX@ADMIN:~$ CAT FILE
-```
-
-```bash
-    DISPLAY THE FILE CALLED FILE ONE PAGE AT A TIME, PROCEED TO NEXT PAGE USING THE SPACEBAR                         --> LINUX@ADMIN:~$ MORE FILE
-```
-
-```bash
-    OUTPUT THE FIRST 10 LINES OF FILE                                                                                --> LINUX@ADMIN:~$ HEAD FILE
-```
-
-```bash
-    DISPLAY THE FIRST 20 LINES OF THE FILE CALLED FILE                                                               --> LINUX@ADMIN:~$ HEAD -20 FILE
-```
-
-```bash
-    OUTPUT THE LAST 10 LINES OF FILE                                                                                 --> LINUX@ADMIN:~$ TAIL FILE
-```
-
-```bash
-    DISPLAY THE LAST 20 LINES OF THE FILE CALLED FILE                                                                --> LINUX@ADMIN:~$ TAIL -20 FILE
-```
-
-```bash
-    OUTPUT THE CONTENTS OF FILE AS IT GROWS, STARTING WITH THE LAST 10 LINES                                         --> LINUX@ADMIN:~$ TAIL -F FILE
-```
-
-<h6 align="center">🔏 COMPRESSION</h6>
-
-```bash
-    CREATE A TAR NAMED FILE.TAR CONTAINING FILES                                      --> LINUX@ADMIN:~$ TAR CF FILE.TAR FILES
-    EXTRACT THE FILES FROM FILE.TAR                                                   --> LINUX@ADMIN:~$ TAR XF FILE.TAR
-```
-
-```bash
-    CREATE A TAR WITH GZIP COMPRESSION                                                --> LINUX@ADMIN:~$ TAR CZF FILE.TAR.GZ FILES
-    EXTRACT A TAR USING GZIP                                                          --> LINUX@ADMIN:~$ TAR XZF FILE.TAR.GZ
-```
-
-```bash
-    CREATE A TAR WITH BZIP2 COMPRESSION                                               --> LINUX@ADMIN:~$ TAR CJF FILE.TAR.BZ2 FILES
-    EXTRACT A TAR USING BZIP2                                                         --> LINUX@ADMIN:~$ TAR XJF FILE.TAR.BZ2
-```
-
-```bash
-    COMPRESSES WITH BZIP2 COMPRESSION                                                 --> LINUX@ADMIN:~$ BZIP2 FILE
-    EXTRACT THE FILES FROM FILE.BZ2                                                   --> LINUX@ADMIN:~$ BUNZIP2 FILE.BZ2
-```
-
-```bash
-    COMPRESSES FILE AND RENAMES IT TO FILE.GZ                                         --> LINUX@ADMIN:~$ GZIP FILE
-    DECOMPRESSES FILE.GZ BACK TO FILE                                                 --> LINUX@ADMIN:~$ GZIP -D FILE.GZ
-```
-
-```bash
-    COMPRESSES FILE WITH XZ COMPRESSION                                               --> LINUX@ADMIN:~$ TAR CJF FILE.TAR.XZ FILES
-    EXTRACT THE FILES FROM FILE.TAR.XZ                                                --> LINUX@ADMIN:~$ TAR XF FILE.TAR.XZ
-```
-
-```bash
-    COMPRESSES FILE WITH ZIP COMPRESSION                                              --> LINUX@ADMIN:~$ ZIP FILE
-    EXTRACT THE FILES FROM FILE.ZIP                                                   --> LINUX@ADMIN:~$ UNZIP FILE
-```
-
-```bash
-    CREATE A CPIO FILE FROM FILES REGEX WITH 'FILE*'                                  --> LINUX@ADMIN:~$ FIND ./ -NAME 'FILE*' | CPIO -O > BACKUP.CPIO
-    EXTRACT THE FILE FROM FILE.CPIO                                                   --> LINUX@ADMIN:~$ CPIO -I < FILE.CPIO
-```
-
-```bash
-    COMPRESS A CPIO WITH GZIP NAMED BACKUP.CPIO.GZ                                    --> LINUX@ADMIN:~$ FIND ./ -NAME 'arquivo*' | CPIO -O | GZIP > BACKUP.CPIO.GZ
-    EXTRAT THE FILE FROM FILE.CPIO.GZ (1)                                             --> LINUX@ADMIN:~$ GUNZIP -C FILE.CPIO.GZ | CPIO -I
-    EXTRAT THE FILE FROM FILE.CPIO.GZ (1)                                             --> LINUX@ADMIN:~$ GZIP -D FILE.CPIO.GZ && CPIO -i < FILE.CPIO
-```
 ## 🔏 PRINTING (USA "+" PARA COLOCAR PERMISOS Y "-" PARA ELIMINAR)
 
 ### 👑 START THE PRINT DAEMON
@@ -451,170 +277,22 @@
     # COMANDOS SEPARADOS POR && SÃO EXECUTADOS SOMENTE SE O COMANDO ANTERIOR FOR EXECUTADO CORRETAMENTE
     # COMANDOS SEPERADOS POR || SÃO EXECUTADOS SOMENTE SE O COMANDO ANTERIOR NÃO FOR EXECUTADO CORRETAMENTE
 
-## 🔏 BUSCANDO INFORMAÇÕES SOBRE OS COMANDOS
-
-    # OBTER A DESCRIÇÃO DE COMANDOS INTERNOS AO BASH-> MAN BASH
-    # OBTER A DESCRIÇÃO DE UM COMANDO COM BASE NO NOME DO COMANDO                    --> MAN <COMANDO>
-    # BUSCA OS COMANDOS COM BASE EM UM TRECHO DA DESCRIÇÃO DO MESMO                  --> MAN -K <DESCRICAO>
-    # OBTER UMA DESCRICAO RESUMIDA DE UM COMANDO                                     --> INFO <COMANDO>
-    # BUSCA OS COMANDOS COM BASE NA DESCRIÇÃO                                        --> APROPOS <DESCRICAO>
-    # BUSCA INFORMAÇÕES SOBRE O COMANDO COM BASE NO NOMES DESTE                      --> LINUX@ADMIN:~$ WHATIS
-    # BUSCA POR EXECUTÁVEIS NO PATHS EXPORTADOS                                      --> LINUX@ADMIN:~$ WHICH
-    # BUSCA POR ARQUIVOS EXECUTÁVEIS, MAN PAGES, ARQUIVOS DE CONFIGURAÇÃO E FONTES   --> LINUX@ADMIN:~$ WHEREIS
-
 ## 🔏 QUOTING
 
     # ASPAS DUPLAS PROTEGEM TODOS OS CARACTERES, EXCETO: CIFRÃO, CRASE E BARRA SIMPLES
     # ASPAS SIMPLES PROTEGEM TODOS OS CARCTERES
 
-## 🔏 COMANDOS DE TELA
-
-    # EXIBIR A MENSAGEM "OLA, MUNDO" NO TERMINAL                                                            --> LINUX@ADMIN:~$ echo "OLA, MUNDO"
-    # LIMPAR O BUFFER DO TERMINAL                                                                           --> LINUX@ADMIN:~$ CLEAR
-    # LIMPAR O TERMINAL                                                                                     --> LINUX@ADMIN:~$ CTRL + L
-    # INICIALIZAR UM BASH                                                                                   --> LINUX@ADMIN:~$ BASH
-    # SAIR DO BASH                                                                                          --> LINUX@ADMIN:~$ EXIT
-    # ACESSAR UMA PASTA                                                                                     --> LINUX@ADMIN:~$ CD
-    # LISTAR OS ARQUIVOS DE UMA PASTA                                                                       --> LINUX@ADMIN:~$ LS
-    # ABRIR UM ARQUIVO DE TESTE NO TERMINAL                                                                 --> LINUX@ADMIN:~$ CAT
-    # ACESSAR O BASH COMO ADMINISTRADOR                                                                     --> LINUX@ADMIN:~$ SUDO SU
-    # DESLIGAR O SISTEMA                                                                                    --> LINUX@ADMIN:~$ POWEROFF
-    # MUDAR A RESOLUÇÃO DO MONITOR                                                                          --> LINUX@ADMIN:~$ XRANDR -S 800X600
-    # RODAR O SCRIPT CHAMADO SRIPT.sh COM A VARIÁVEL TESTE VALENDO WINDOWS, NA INSTÂNCIA DA INSTRUÇÃO       --> LINUX@ADMIN:~$ env TESTE=Windows ./SCRIPT.sh
-    # EXIBIR O DIRETÓRIO DA PASTA ATUAL (PRINT WORK DIRECTORY)                                              --> LINUX@ADMIN:~$ PWD
-    # SAIR DO COMANDO                                                                                       --> LINUX@ADMIN:~$ Q
-    # CONFERIR O ESPAÇO EM DISCO                                                                            --> LINUX@ADMIN:~$ DF
-    # EXIBIR TODOS OS ARQUIVOS DO DIRETÓRIO ATUAL                                                           --> LINUX@ADMIN:~$ echo *
-    # EXIBE OS DADOS ACIMA PARA TODOS OS ARQUIVOS DA PASTA ATUAL                                            --> LINUX@ADMIN:~$ WC *
-    # REDIRECIONAMENTO DE SUCERRO E ERRO                                                   -->LINUX@ADMIN:~$ ls -ltr {{T,t}este.txt,Teste.{md,MD}} 1> sucesso.txt 2> erro.txt
-
 ## 🔏 CONFIGURAÇÃO TECLAS ?\ TECLADO LENOVO
 
-    # COFIGURAÇÃO TECLADO LENOVO --> LINUX@ADMIN:~$ setxkbmap -model abnt2 -layout br -variant abnt2 && xmodmap -e "keycode 105 = KP_Divide question"
-
-<h6 align="center">🔏 VARIÁVEIS</h6>
-
-    # EXIBIR AS VARIÁVEIS DE AMBIENTE                                                   --> LINUX@ADMIN:~$ SET | LESS
-    # EXIBIR AS VARIÁVEIS DE GLOBAIS                                                    --> LINUX@ADMIN:~$ ENV | LESS 
-    # EXIBIR O TIPO DE VARIÁVEL                                                         --> LINUX@ADMIN:~$ TYPE <NOME_DA_VARIAVEL>
-    # REMOVER A VARIÁVEL CHAMADA VAR                                                    --> LINUX@ADMIN:~$ UNSET VAR
-    # CRIAR UMA VARIÁVEL CHAMADA VAR                                                    --> LINUX@ADMIN:~$ VAR
-    # CRIAR UMA VARIÁVEL CHAMADA VAR, ATRIBUINDO-A O VALOR 10                           --> LINUX@ADMIN:~$ VAR=10
-    # CRIAR UMA VARIÁVEL CHAMADA VAR, ARIBUINDO O VALOR 10 E EXPORTÁ-LA                 --> LINUX@ADMIN:~$ EXPORT VAR=10
-
-<h6 align="center">🔏 TRABALHANDO COM ARQUIVOS DE TEXTO</h6>
+# COFIGURAÇÃO TECLADO LENOVO
 
 ```bash
-    ABRIR UM ARQUIVO DE TEXTO                                                   --> LINUX@ADMIN:~$ CAT NOME_DO_ARQUIVO.FORMATO
+LINUX@ADMIN:~$ setxkbmap -model abnt2 -layout br -variant abnt2 && xmodmap -e "keycode 105 = KP_Divide question"
 ```
-
-```bash
-    ABRIR UM ARQUIVO DE TEXTO COM TODAS AS LINHAS NUMERADAS                     --> LINUX@ADMIN:~$ CAT -N NOME_DO_ARQUIVO.FORMATO
-```
-
-```bash
-    ABRIR UM ARQUIVO DE TEXTO COM TODAS AS LINHAS NÃO VAZIAS NUMERADAS          --> LINUX@ADMIN:~$ CAT -B NOME_DO_ARQUIVO.FORMATO (SIMILAR AO COMANDO NL)
-```
-
-```bash
-    ABRIR UM ARQUIVO DE TEXTO DEIXANDO E REMOVER LINHAS EM BRANCO DUPLICADAS    --> LINUX@ADMIN:~$ CAT -S NOME_DO_ARQUIVO.FORMATO
-```
-
-```bash
-    ABRIR UM ARQUIVO DE TEXTO EXIBINDO TODOS OS CARACTERES PRESENTES NO ARQUIVO --> LINUX@ADMIN:~$ CAT -A NOME_DO_ARQUIVO.FORMATO
-```
-
-```bash
-    JOGAR O CONTEÚDO DO ARQUUVO TESTE.TXT NELE MESMO                            --> LINUX@ADMIN:~$ CAT TEST.TXT | CAT >> TESTE.TXT
-```
-
-```bash
-    JOGAR UM TEXTO NA TELA EM ORDEM INVERSA                                     --> LINUX@ADMIN:~$ TAC
-```
-
-```bash
-    ABRIR UM ARQUIVO DE TEXTO COM AS LINHAS INVERTIDAS                          --> LINUX@ADMIN:~$ TAC NOME_DO_ARQUIVO.FORMATO
-```
-
-```bash
-    ABRIR AS PRIMEIRAS X LINHAS DE UM ARQUIVO DE TEXTO                          --> LINUX@ADMIN:~$ HEAD -XN NOME_DO_ARQUIVO.FORMATO
-```
-
-```bash
-    ABRIR AS X ÚLTIMAS LINHAS DE UM ARQUIVO                                     --> LINUX@ADMIN:~$ TAIL -XN NOME_DO_ARQUIVO.FORMATO
-```
-
-```bash
-    ABRIR UM ARQUIVO E MONITORÁ-LO (LOG, POR EXEMPLO)                           --> LINUX@ADMIN:~$ TAIL -F NOME_DO_ARQUIVO.FORMATO
-```
-
-```bash
-    INSERIR UMA STRING AO FINAL DE UM ARQUIVO DE TEXTO                          --> LINUX@ADMIN:~$ ECHO "MENSAGEM" >> NOME_DO_ARQUIVO.FORMATO
-```
-
-```bash
-    ABRIR UM ARQUIVO DE TEXTO COM PAGINAÇÃO                                     --> LINUX@ADMIN:~$ LESS FILENAME.FORMAT ('/' PERMITE PESQUISAR TERMOS, 'N' REPETE A PESQUISA)
-```
-
-```bash
-    EXIBIR O NÚMERO DE LINHAS, PALAVRAS E BYTES DE UM ARQUIVO DE TEXTO          --> LINUX@ADMIN:~$ WC NOME_DO_ARQUIVO.FORMATO
-```
-
-```bash
-    ABRIR UM ARQUIVO DE TEXTO ORDENANDO AS LINHAS                               --> LINUX@ADMIN:~$ SORT NOME_DO_ARQUIVO.FORMATO
-```
-
-```bash
-    ABRIR UM ARQUIVO DE TEXTO ORDENANDO PELAS SEGUNDAS PALAVRAS DA LINHA        --> LINUX@ADMIN:~$ SORT -K2 NOME_DO_ARQUIVO.FORMATO
-```
-
-```bash
-    QUEBRAR UM ARQUIVO DE TEXTO EM N LINHAS EM OUTROS                           --> LINUX@ADMIN:~$ SPLIT -L FILE.FORMAT OUTPUT-FILE-
-```
-
-```bash
-    REMOVER TODAS AS OCORRÊNCIAS DA LETRA A, B, C NUM TEXTO                     --> LINHA@ADMIN:~$ CAT FILE.FORMAT | TR -D [A][B][C]
-```
-
-```bash
-    SUBSTITUIR AS OCORRÊNCIAS A POR B, B POR C, C POR D                         --> LINUX@ADMIN:~$ CAT FILE.FORMAT | TR [A][C][C] [B][C][D]
-```
-
-```bash
-    OBTER OS CARACTERES DE 1 A 5 DE UM TEXTO                                    --> LINUX@ADMIN:~$ CAT FILE.FORMAT | CUT -C1-5
-```
-
-```bash
-    OBTER OS CARACTERES A PARTIR DO 1 DE UM TEXTO                               --> LINUX@ADMIN:~$ CAT FILE.FORMAT | CUT -C1-
-```
-
-```bash
-    DIVIR O TEXTO BASEADO EM PONTO E VÍRGULA E OBTER O SEGUNDO ELEMENTO         --> LINUX@ADMIN:~$ CUT -D";" -F2 FILE.FORMAT
-```
-
-```bash
-    APAGAR DA LINHA 3 ATÉ  ALINHA 5 DD UM ARQUIVO DE TEXTO                      --> LINUX@ADMIN:~$ SED '3,5 D' FILE.FORMAT
-```
-
-```bash
-    APAGAR A LINHA EM QUE A PALAVRA 'TESTE' FOR ENCONTRADA                      --> LINUX@ADMIN:~$ SED '/TESTE/D/' FILE.FORMAT
-```
-
-## 🔏 HASH
-
-    # MD5SUM
-    
-    # SHA256SUM
-
-    # SHA512SUM
-
-    # SHA1SUM
-
-    # sha256sum -c NOME_ARQUIVO
     
 ## 🔏 INSTALAÇÃO
 
-    # LISTAR TODOS OS SOFTWARES INSTALADOS ON UBUNTU --> LINUX@ADMIN:~$ grep " install " /var/log/dpkg.log
+# LISTAR TODOS OS SOFTWARES INSTALADOS ON UBUNTU --> LINUX@ADMIN:~$ grep " install " /var/log/dpkg.log
 
 ## 🔏 HISTORY
 
@@ -627,29 +305,3 @@
     > LIMPAR O HISTÓRICO DE COMANDOS DIGITADOS --> LINUX@ADMIN:~$ HISTORY -C
 
     > PESQUISAR PELOS COMANDOS SALVOS EM BASH.HISTORY --> LINUX@ADMIN:~$ CTRL + R
-
-<h2>🔏 SINCRONIZAÇÃO</h2>
-
-<h4>SINCRONIZAR APENAS OS ARQUIVOS QUE NÃO ESTÃO PRESENTES OU QUE FORAM ALTERADOS</h4>
-
-```
-    LINUX@ADMIN:~$ RSYNC -HAVZ $PWD/LOCAL/ $PWD/REMOTO
-```
-
-<h4>REMOVER OS ARQUIVOS REMOTOS QUE NÃO ESTÃO PRESENTES LOCAMENTE</h4>
-
-```
-    LINUX@ADMIN:~$ RSYNC -HAVZ -DELETE $PWD/LOCAL/ $PWD/REMOTO
-```
-
-<h4>SINCRONIZAR APENAS OS ARQUIVOS TXT DA ORIGEM</h4>
-
-```
-    LINUX@ADMIN:~$ RSYNC -HAVZ --INCLUDE="*.TXT" --EXCLUDE="*" $PWD/LOCAL/ $PWD/REMOTO
-```
-
-<h4>SINCRONIZAR REMOTAMENTE UTILIZANDO SSH</h4>
-
-```
-    LINUX@ADMIN:~ rsync -hvazz --include="*.png" --exclude="*" $PWD/local/ root@192.168.1.9:$PWD/remoto
-```
